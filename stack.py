@@ -9,6 +9,10 @@ class Stack:
     def pop(self):
         Stack.stack.pop()
 
+    def getTop(self):
+        print(Stack.stack[-1])
+        return Stack.stack[-1]
+
 
 stack = Stack()
 
