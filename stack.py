@@ -1,37 +1,41 @@
 class Stack:
 
-    stack = []
+    def __init__(self):
+        self.stack = []
 
     def push(self, *elements):
-        for element in elements:
-            Stack.stack.append(element)
+        self.stack.extend(elements)
 
     def pop(self):
-        Stack.stack.pop()
+        if self.stack:
+            return self.stack.pop()
+        else:
+            return 0
 
     def getTop(self):
-        print(Stack.stack[-1])
-        return Stack.stack[-1]
+        if self.stack:
+            return self.stack[-1]
+        
+        # Extra Functions By me
+
+    def reverseWord(self):
+        self.stack.reverse()
+
     
     def isEmpty(self):
-        if len(Stack.stack):
-            print('There are elements in stack')
-            return True
-        else:
-            print('Stack is empty')
-            return False
+        return not bool(self.stack)
 
 
 stack = Stack()
 
-stack.push(1,2,3)
+stack.push("a", "h", "m", "e", "d", " ", "a", "z", "z", "a", "m")
 
 print(stack.stack)
 
-stack.pop()
+stack.reverseWord()
 
 print(stack.stack)
 
-stack.getTop()
+print(stack.getTop())
 
-stack.isEmpty()
+print(stack.isEmpty())
