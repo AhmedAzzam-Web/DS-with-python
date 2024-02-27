@@ -37,3 +37,11 @@ queue.dequeue()
 
 print(queue.queue)
 print(queue.isEmpty())
+
+# The queue is implemented using the "collections" library 
+# import collections
+# q = collections.deque()
+# q.appendleft(10)   The appending element method
+# q.pop()   The popped element method
+
+# appendleft goes with pop. append goes with popleft
